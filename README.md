@@ -1,7 +1,7 @@
 # Simulador de Filas em Tandem
 
 Simulação e Métodos Analíticos, M6
-Integrantes: (nomes de todos)
+Integrantes: Leonardo Soares da Silva, Lucas Cid Duarte, Erick Marcondes de Mattos, Bernardo Lykawka;
 
 ## Requisitos
 Java 17 ou superior (testado com Java 21).

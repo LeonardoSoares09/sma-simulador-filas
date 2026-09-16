@@ -3,15 +3,10 @@ import java.util.Arrays;
 public class Main {
      public static void main(String[] args) {
         
-        Escalonador esc = new Escalonador();
-        esc.agendar(new Evento(Evento.Tipo.SAIDA, 7.0));
-        esc.agendar(new Evento(Evento.Tipo.CHEGADA, 2.5));
-        esc.agendar(new Evento(Evento.Tipo.PASSAGEM, 4.3));
-        esc.agendar(new Evento(Evento.Tipo.CHEGADA, 4.0));
-
-        for (int i = 0; i < 4; i++) {
-            Evento e = esc.proximo();
-            System.out.println(e.getTempo() + " " + e.getTipo());
-        }
+        Fila f1 = new Fila(2, 3, 1.0, 5.0, 4.0, 5.0);
+        Fila f2 = new Fila(1, 5, 0, 0, 1.0, 3.0);
+        GeradorAleatorio g = new GeradorAleatorio(42, 100000);
+        Simulador sim = new Simulador(f1, f2, g);
+        System.out.println("Simulador criado");
     }
 }

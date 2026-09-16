@@ -3,18 +3,15 @@ import java.util.Arrays;
 public class Main {
      public static void main(String[] args) {
         
-        Fila fila = new Fila(2, 3, 1, 5, 4, 5);
+        Escalonador esc = new Escalonador();
+        esc.agendar(new Evento(Evento.Tipo.SAIDA, 7.0));
+        esc.agendar(new Evento(Evento.Tipo.CHEGADA, 2.5));
+        esc.agendar(new Evento(Evento.Tipo.PASSAGEM, 4.3));
+        esc.agendar(new Evento(Evento.Tipo.CHEGADA, 4.0));
 
-        fila.entrada();
-        fila.acumulaTempo(5);
-
-        fila.entrada();
-        fila.acumulaTempo(3);
-
-        fila.saida();
-        fila.acumulaTempo(2);
-
-        System.out.println(Arrays.toString(fila.getTempos()));
+        for (int i = 0; i < 4; i++) {
+            Evento e = esc.proximo();
+            System.out.println(e.getTempo() + " " + e.getTipo());
+        }
     }
-    
 }

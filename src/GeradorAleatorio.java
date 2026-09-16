@@ -22,14 +22,3 @@ public class GeradorAleatorio {
     }
     
 }
-
-class Main {
-    public static void main(String[] args) {
-        
-        GeradorAleatorio gerador = new GeradorAleatorio(42, 5);
-
-        while (gerador.temAleatorios()){
-            System.out.println(gerador.proximo());
-        }
-    }
-}
